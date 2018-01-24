@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 1
+  first_name: MyString
+  last_name: MyString
+  dob: 2018-01-16 12:33:19
+  gender: MyString
+  blood_group: MyString
+  birth_place: MyString
+  category: MyString
+  student_class: MyString
+  session: MyString
+  address_line1: MyString
+  address_line2: MyString
+  city: MyString
+  state: MyString
+  pincode: 
+  phone_no: 
+  photo: MyString
+  addmission_date: 2018-01-16 12:33:19
+  father_name: MyString
+  mother_name: MyString
+  emergency_no: 
+  previous_school_name: MyString
+  obtained: MyString
+  previous_class: MyString
+  adharcard: MyString
+  previous_school_marksheet: MyString
+
+two:
+  student_id: 1
+  first_name: MyString
+  last_name: MyString
+  dob: 2018-01-16 12:33:19
+  gender: MyString
+  blood_group: MyString
+  birth_place: MyString
+  category: MyString
+  student_class: MyString
+  session: MyString
+  address_line1: MyString
+  address_line2: MyString
+  city: MyString
+  state: MyString
+  pincode: 
+  phone_no: 
+  photo: MyString
+  addmission_date: 2018-01-16 12:33:19
+  father_name: MyString
+  mother_name: MyString
+  emergency_no: 
+  previous_school_name: MyString
+  obtained: MyString
+  previous_class: MyString
+  adharcard: MyString
+  previous_school_marksheet: MyString

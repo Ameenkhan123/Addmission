@@ -1,0 +1,41 @@
+class EmployeesController < ApplicationController
+	 # GET /pets
+  # GET /pets.json
+  def index
+    @employees = Employee.where.not(first_name: nil)
+     @employees = Employee.search(params[:employee])
+
+  end
+
+  # GET /pets/1
+  # GET /pets/1.json
+   def show
+ @employee = Employee.find(params[:id])
+  end
+
+  # GET /pets/new
+  def new
+  	@employee = Employee.new
+  end
+
+  # POST /pets
+  # POST /pets.json
+  def create
+  	@employee = Employee.new
+  	@employee.save(validate: false)
+  	redirect_to employee_step_path(@employee, Employee.form_steps.first)
+  end
+
+  # DELETE /pets/1
+  # DELETE /pets/1.json
+  def destroy
+      @employee = Employee.find(params[:id])
+        @employee.destroy
+        redirect_to employees_path
+  end
+
+  private
+    def employee_params
+    	params.require(:employee).permit(:employee_id,:joining_date, :first_name,:last_name,:dob, :gender, :department, :position,:job_title, :qualification, :experience, :maritel_status, :qualification, :father_name, :mother_name, :blood_group, :spocecom,:photo,:address_line1, :address_line2,:city, :state, :pincode, :phone_no, :email,:adharcard, :pan_card, :passport, :last_degree, :experience_certificate, :voter_card)
+    end
+end
