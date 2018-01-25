@@ -5,8 +5,10 @@ class StudentsController < ApplicationController
     # Normally you'd have more complex requirements about
     # when not to show rows, but we don't show any records that don't have a name
     @students = Student.where.not(Firstname: nil)
-    @students = Student.search(params[:student])
+    # @students = Student.search(params[:student])
     @students = Student.order('addmission_date')
+      @q = Student.ransack(params[:q])
+    @students = @q.result
 
   end
 
@@ -24,7 +26,7 @@ class StudentsController < ApplicationController
   # POST /pets
   # POST /pets.json
   def create
-  	@student = Student.new
+  	@student = Student.new(student_params)
   	@student.save(validate: false)
   	redirect_to student_step_path(@student, Student.form_steps.first)
   end

@@ -60,15 +60,15 @@
           </div>
         </section>
         <!-- Content -->
-        <div id='content'>
+        <div id='content' style="background-color: #bdc3c7;">
           <div class='panel panel-default'>
             <div class='panel-heading' style="background-color: #2c3e50; color: white">
               <i class='icon-edit icon-large'></i>
               Addmission
             </div>
-            <div class='panel-body'>
+            <div class='panel-body' style="background-color: #2c3e50; color: white">
              <!--  <legend>Registration Form</legend> -->
-             <%= form_for @student, :html => { :class => "form-horizontal student" } do |f| %>
+             <%= form_for @student, :html => { :class => "" } do |f| %>
 
   <% if @student.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
@@ -85,7 +85,16 @@
     </div>
   <% end %>
   <div class="form-group">
-    <div class="col-lg-offset-2 col-lg-10">
+    <%= f.label :first_name, :class => 'control-label col-lg-2' %><br>
+    <%= f.text_field :first_name, :class => 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Last_name, :class => 'control-label col-lg-2' %><br>
+    <%= f.text_field :last_name, :class => 'form-control' %>
+  </div>
+  <div class="form-group">
+    <div class="control-label col-lg-2'">
     
       <%= f.submit "Registration Form", :class => 'btn btn-primary' %>
 
@@ -99,15 +108,10 @@
             </div>
           </div>
           <div class='panel panel-default'>
-            <div class='panel-heading'>
+            <div class='panel-heading' style="background-color: #2c3e50; color: white">
               <i class='icon-edit icon-large'></i>
               <!--  Knob Inputs -->
             </div>
-         <!--  <div class='panel-body text-center'>
-            <input class='knob' data-height='150' data-width='150' type='text' value='75'>
-            <input class='knob' data-fgColor='#16a085' data-height='150' data-width='150' type='text' value='100'>
-            <input class='knob' data-fgColor='#7f8c8d' data-height='150' data-width='150' type='text' value='200'>
-          </div> -->
         </div>
       </div>
     </div>

@@ -15,13 +15,13 @@ class CreateStudents < ActiveRecord::Migration[5.1]
       t.string :address_line2
       t.string :city
       t.string :state
-      t.numeric :pincode
-      t.numeric :phone_no
+      t.string :pincode
+      t.string :phone_no
       t.string :photo
       t.datetime :addmission_date
       t.string :father_name
       t.string :mother_name
-      t.numeric :emergency_no
+      t.string :emergency_no
       t.string :previous_school_name
       t.string :obtained
       t.string :previous_class

@@ -3,7 +3,9 @@ class EmployeesController < ApplicationController
   # GET /pets.json
   def index
     @employees = Employee.where.not(first_name: nil)
-     @employees = Employee.search(params[:employee])
+     # @employees = Employee.search(params[:employee])
+        @q = Employee.ransack(params[:q])
+    @employees = @q.result
 
   end
 
@@ -21,7 +23,7 @@ class EmployeesController < ApplicationController
   # POST /pets
   # POST /pets.json
   def create
-  	@employee = Employee.new
+  	@employee = Employee.new(employee_params)
   	@employee.save(validate: false)
   	redirect_to employee_step_path(@employee, Employee.form_steps.first)
   end
