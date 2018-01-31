@@ -12,7 +12,7 @@ class EmployeesController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
    def show
- @employee = Employee.find(params[:id])
+ @employee = Employee.friendly.find(params[:id])
   end
 
   # GET /pets/new

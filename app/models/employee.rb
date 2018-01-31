@@ -1,4 +1,7 @@
 class Employee < ApplicationRecord
+   extend FriendlyId
+    friendly_id :name, use: :slugged
+    
 	  cattr_accessor :form_steps do
     %w(identity characteristics instructions)
   end

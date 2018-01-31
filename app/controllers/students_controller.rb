@@ -15,7 +15,7 @@ class StudentsController < ApplicationController
   # GET /pets/1
   # GET /pets/1.json
   def show
-    @student = Student.find(params[:id])
+    @student = Student.friendly.find(params[:id])
   end
 
   # GET /pets/new
