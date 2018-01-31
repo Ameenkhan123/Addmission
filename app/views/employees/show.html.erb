@@ -1,225 +1,215 @@
 <style type="text/css">
-  .img{
-    width: 80px;
-}
-.right{
-    text-align: center;
-    font-family: bold;
-    font-size: 20px;
-}
-.size{
-   width: 50%; 
+   .img{
+      width: 80px;
+ }
+ .right{
+      text-align: center;
+      font-family: bold;
+      font-size: 20px;
+ }
+ .size{
+  width: 50%; 
 }
 dt{
-  font-size: 15px;
+   font-size: 15px;
 }
 </style>
 <div id='wrapper'>
-  <!-- Sidebar -->
-  <section id='sidebar'>
-    <i class='icon-align-justify icon-large' id='toggle'></i>
-    <ul id='dock'>
-      <li class='launcher'>
-        <i class='icon-dashboard'></i>
-        <a href="dashboard.html">Dashboard</a>
-    </li>
-    <li class='active launcher'>
-        <i class='icon-file-text-alt'></i>
-        <a><%= link_to 'Form',
-          new_employee_path %></a>
-      </li>
-      <li class='launcher'>
+   <!-- Sidebar -->
+   <section id='sidebar'>
+      <i class='icon-align-justify icon-large' id='toggle'></i>
+      <ul id='dock'>
+         <li class='launcher'>
+            <i class='icon-dashboard'></i>
+            <a href="dashboard.html">Dashboard</a>
+       </li>
+       <li class='active launcher'>
+            <i class="glyphicon glyphicon-user"></i>
+            <a><%= link_to 'Addmission',
+             new_employee_path %></a>
+        </li>
+        <li class='launcher'>
           <i class='icon-table'></i>
           <a ><%= link_to 'Tables',
-            employees_path %></a>
+             employees_path %></a>
         </li>
         <li class='launcher dropdown hover'>
-            <i class='icon-flag'></i>
-            <a href='#'>Reports</a>
-            <ul class='dropdown-menu'>
-              <li class='dropdown-header'>Launcher description</li>
+             <i class='icon-flag'></i>
+             <a href='#'>Reports</a>
+             <ul class='dropdown-menu'>
+                <li class='dropdown-header'>Launcher description</li>
+                <li>
+                   <a href='#'>Action</a>
+              </li>
               <li>
-                <a href='#'>Action</a>
-            </li>
-            <li>
-                <a href='#'>Another action</a>
-            </li>
-            <li>
-                <a href='#'>Something else here</a>
-            </li>
-        </ul>
+                   <a href='#'>Another action</a>
+              </li>
+              <li>
+                   <a href='#'>Something else here</a>
+              </li>
+         </ul>
     </li>
     <li class='launcher'>
-        <i class='icon-bookmark'></i>
-        <a href='#'>Bookmarks</a>
-    </li>
-    <li class='launcher'>
-        <i class='icon-cloud'></i>
-        <a href='#'>Backup</a>
-    </li>
-    <li class='launcher'>
-        <i class='icon-bug'></i>
-        <a href='#'>Feedback</a>
-    </li>
+       <i class='icon-bookmark'></i>
+       <a href='#'>Bookmarks</a>
+  </li>
+  <li class='launcher'>
+       <i class='icon-cloud'></i>
+       <a href='#'>Backup</a>
+  </li>
+  <li class='launcher'>
+       <i class='icon-bug'></i>
+       <a href='#'>Feedback</a>
+  </li>
 </ul>
 <div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
 </section>
 <!-- Tools -->
 <section id='tools'>
-    <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50">
-      <li class='title'>Forms</li>
-  </ul>
-  <div id='toolbar' >
+ <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50">
+    <li class='title'>Forms</li>
+</ul>
+<div id='toolbar' >
 
-  </div>
+</div>
 </section>
 <!-- Content -->
 <div id='content' style="background-color: #bdc3c7">
-    <div class='panel panel-default' >
-      <div class='panel-heading'  style="background-color:white ;">
-        <i class='icon-edit icon-large'></i>
-        Form Default
-    </div>
-    <div class='panel-body' style="background-color:#1c2a48;">
-        <legend style="color: white ;">Default Inputs</legend>
+ <div class='panel panel-default' >
+    <div class='panel-heading'  style="background-color: #2c3e50; color:white">
+       <i class='icon-edit icon-large'></i>
+       Employee
+  </div>
+  <div class='panel-body' style="background-color:#1c2a48;">
 
         <!-- <div class="page-header">
-        </div> -->
-        <div class="col-md-12" >
-          <div class="col-md-2"  style="color: white ">
-<hr>
-            <strong>Photo</strong><br>
-           
-            <%= image_tag @employee.photo  , :class => 'img responsive size'  %>
-            <hr></div>
+   </div> -->
+   <div class="col-md-12" >
+     <div class="col-md-2"  style="color: white ">
+          <hr>
+          <strong>Photo</strong><br>
+          
+          <%= image_tag @employee.photo  , :class => 'img responsive size'  %>
+          <hr></div>
 
- <!--  <dt><strong><%#= model_class.human_attribute_name(:employee_id) %>:</strong></dt>
-  <dd class="right"><%#= @employee.employee_id %></dd><br>
+          <div class="col-md-2"  style="color: white " >
+              <!-- <h1>Profile</h1> -->
+              <hr>
+              <strong>name:</strong><br>
+              <%= @employee.name %>
+              <hr>
+              <div>
+                   
+                  <strong>Bod</strong><br>
+                  <%= @employee.dob %>
+             </div>
+             <hr>
+             <div>
+                  <strong>Gender:</strong><br>
+                  <%= @employee.gender %>
+                  
+             </div>
+             <hr>
+             <strong>father_name:</strong><br>
+             <%= @employee.father_name %>
+             <hr>
+             <strong>mother_name:</strong><br>
+             <%= @employee.mother_name %>
+             <hr>
+             <strong>blood_group:</strong><br>
+             <%= @employee.blood_group %>
+             <hr>
+        </div>
+        <div class="col-md-2" style="color: white ">
+             <!-- <h1>Content</h1> -->
+             <hr>
+             <strong>city:</strong><br>
+             <%= @employee.city %>
+             <hr>
+             <div>
+                  <strong>state:</strong><br>
+                  <%= @employee.state %>
+                  
+             </div>
+             <hr>
+             <strong>pincode:</strong><br>
+             <%=  @employee.pincode   %>
+             <hr>
+             <div>
+                
+                  <strong>phone_no:</strong><br>
+                  <%= @employee.phone_no  %>
+             </div>
+             <hr>
+             <strong>address_line1:</strong><br>
+             <%= @employee.address_line1 %>
+             <hr>
+             <strong>address_line2:</strong><br>
+             <%= @employee.address_line2 %>
 
-  <hr>  -->
+        </div>
+        <div class="col-md-3" style="color: white ">
+          <hr>
+          <!-- <h1>department</h1> -->
+          <strong>joining date</strong><br>
+          <%= @employee.joining_date %>
+          <hr>
+          <strong>department:</strong><br>
+          <%= @employee.department %>
+          <hr>
+          <strong>position:</strong><br>
+          <%= @employee.position %>
+          <hr>
+          <strong>job_title:</strong><br>
+          <%= @employee.job_title %>
+          <hr>
+          <strong>qualification:</strong><br>
+          <%= @employee.qualification %>
+          <hr>
+          <strong>experience:</strong><br>
+          <%= @employee.experience %>
+          <hr>
+          <strong>maritel_status:</strong><br>
+          <%= @employee.maritel_status %>
+          <hr>
 
-  <div class="col-md-2"  style="color: white " >
-      <!-- <h1>Profile</h1> -->
-      <hr>
-      <strong>name:</strong><br>
-      <%= @employee.name %>
-<hr>
-<!-- <hr>  <dt><strong><%#= model_class.human_attribute_name(:last_name) %>:</strong></dt>
-  <dd class="right"><%= @employee.last_name %></dd><br> -->
-  <div>
-      
-  <strong>Bod</strong><br>
-  <%= @employee.dob %>
-  </div>
-  <hr>
-<div>
-  <strong>Gender:</strong><br>
-  <%= @employee.gender %>
-    
-</div>
-<hr>
-  <strong>father_name:</strong><br>
-  <%= @employee.father_name %>
-<hr>
-  <strong>mother_name:</strong><br>
-  <%= @employee.mother_name %>
-<hr>
-    <strong>blood_group:</strong><br>
-    <%= @employee.blood_group %>
-<hr>
-</div>
-<div class="col-md-2" style="color: white ">
-  <!-- <h1>Content</h1> -->
-<hr>
-  <strong>city:</strong><br>
-  <%= @employee.city %>
-  <hr>
-<div>
-  <strong>state:</strong><br>
-  <%= @employee.state %>
-    
-</div>
-<hr>
-  <strong>pincode:</strong><br>
-  <%=  @employee.pincode   %>
-  <hr>
-<div>
-    
-  <strong>phone_no:</strong><br>
-  <%= @employee.phone_no  %>
-</div>
-<hr>
-  <strong>address_line1:</strong><br>
-  <%= @employee.address_line1 %>
-<hr>
-  <strong>address_line2:</strong><br>
-  <%= @employee.address_line2 %>
-
-</div>
-<div class="col-md-3" style="color: white ">
-<hr>
-    <!-- <h1>department</h1> -->
-    <strong>joining date</strong><br>
-    <%= @employee.joining_date %>
-<hr>
-    <strong>department:</strong><br>
-    <%= @employee.department %>
-<hr>
-    <strong>position:</strong><br>
-    <%= @employee.position %>
-<hr>
-    <strong>job_title:</strong><br>
-    <%= @employee.job_title %>
-<hr>
-    <strong>qualification:</strong><br>
-    <%= @employee.qualification %>
-<hr>
-    <strong>experience:</strong><br>
-    <%= @employee.experience %>
-<hr>
-    <strong>maritel_status:</strong><br>
-    <%= @employee.maritel_status %>
-<hr>
-
-    <strong>spocecom:</strong><br>
-    <%= @employee.spocecom %>
-<hr>
-  <strong>email:</strong><br>
-  <%= @employee.email %><br>
-  <hr>
-</div>
+          <strong>spocecom:</strong><br>
+          <%= @employee.spocecom %>
+          <hr>
+          <strong>email:</strong><br>
+          <%= @employee.email %><br>
+          <hr>
+     </div>
 
 
-<div class="col-md-2" style="color: white ">
-<hr>
-   <!--  <h1> Document</h1> -->
-    <strong>adharcard:</strong><br>
-    <%= image_tag @employee.adharcard, :class => 'img responsive'  %>
-<hr>
-    <strong>pan_card:</strong><br>
-    <%= image_tag @employee.pan_card , :class => 'img responsive'  %>
-<hr>
-    <strong>voter_card:</strong><br>
-    <%=  image_tag @employee.voter_card , :class => 'img responsive'   %>
-<hr>
-    <strong>passport:</strong><br>
-    <%= image_tag @employee.passport , :class => 'img responsive'   %>
-<hr>
-    <strong>last_degree:</strong><br>
-    <%= image_tag @employee.last_degree , :class => 'img responsive'   %>
-<hr>
-    <strong>experience_certificate:</strong><br>
-    <%= image_tag @employee.experience_certificate , :class => 'img responsive'   %>
-    <hr>
+     <div class="col-md-2" style="color: white ">
+          <hr>
+          <!--  <h1> Document</h1> -->
+          <strong>adharcard:</strong><br>
+          <%= image_tag @employee.adharcard, :class => 'img responsive'  %>
+          <hr>
+          <strong>pan_card:</strong><br>
+          <%= image_tag @employee.pan_card , :class => 'img responsive'  %>
+          <hr>
+          <strong>voter_card:</strong><br>
+          <%=  image_tag @employee.voter_card , :class => 'img responsive'   %>
+          <hr>
+          <strong>passport:</strong><br>
+          <%= image_tag @employee.passport , :class => 'img responsive'   %>
+          <hr>
+          <strong>last_degree:</strong><br>
+          <%= image_tag @employee.last_degree , :class => 'img responsive'   %>
+          <hr>
+          <strong>experience_certificate:</strong><br>
+          <%= image_tag @employee.experience_certificate , :class => 'img responsive'   %>
+          <hr>
 
-</div>
+     </div>
 
 </div>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
 employees_path, :class => 'btn btn-default'  %>
-<%#= link_to t('.edit', :default => t("helpers.links.edit")),
-edit_employee_path(@employee), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
 employee_path(@employee),
 :method => 'delete',
@@ -228,16 +218,11 @@ employee_path(@employee),
 </div>
 </div>
 <div class='panel panel-default'>
-  <div class='panel-heading' style="background-color: #2c3e50; color:white">
-    <i class='icon-edit icon-large'></i>
-    <!--  Knob Inputs -->
+   <div class='panel-heading' style="background-color: #2c3e50; color:white">
+      <i class='icon-edit icon-large'></i>
+      <!--  Knob Inputs -->
+ </div>
 </div>
-         <!--  <div class='panel-body text-center'>
-            <input class='knob' data-height='150' data-width='150' type='text' value='75'>
-            <input class='knob' data-fgColor='#16a085' data-height='150' data-width='150' type='text' value='100'>
-            <input class='knob' data-fgColor='#7f8c8d' data-height='150' data-width='150' type='text' value='200'>
-        </div> -->
-    </div>
 </div>
 </div>
 <!-- Footer -->
@@ -245,8 +230,8 @@ employee_path(@employee),
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script><script src="assets/javascripts/application-985b892b.js" type="text/javascript"></script>
 <!-- Google Analytics -->
 <script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
+   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+ </script>

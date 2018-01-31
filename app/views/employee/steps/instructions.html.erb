@@ -6,151 +6,131 @@
         <li class='launcher'>
           <i class='icon-dashboard'></i>
           <a href="dashboard.html">Dashboard</a>
+      </li>
+      <li class='active launcher'>
+       <i class="glyphicon glyphicon-user"></i>
+       <a><%= link_to 'Addmission',
+          new_employee_path %></a>
+      </li>
+      <li class='launcher'>
+          <i class='icon-table'></i>
+          <a ><%= link_to 'Tables',
+            employees_path %></a>
         </li>
-        <li class='active launcher'>
-          <i class='icon-file-text-alt'></i>
-          <a><%= link_to 'Form',
-            new_employee_path %></a>
-          </li>
-          <li class='launcher'>
-            <i class='icon-table'></i>
-            <a ><%= link_to 'Tables',
-              employees_path %></a>
+        <li class='launcher dropdown hover'>
+            <i class='icon-flag'></i>
+            <a href='#'>Reports</a>
+            <ul class='dropdown-menu'>
+              <li class='dropdown-header'>Launcher description</li>
+              <li>
+                <a href='#'>Action</a>
             </li>
-            <li class='launcher dropdown hover'>
-              <i class='icon-flag'></i>
-              <a href='#'>Reports</a>
-              <ul class='dropdown-menu'>
-                <li class='dropdown-header'>Launcher description</li>
-                <li>
-                  <a href='#'>Action</a>
-                </li>
-                <li>
-                  <a href='#'>Another action</a>
-                </li>
-                <li>
-                  <a href='#'>Something else here</a>
-                </li>
-              </ul>
+            <li>
+                <a href='#'>Another action</a>
             </li>
-            <li class='launcher'>
-              <i class='icon-bookmark'></i>
-              <a href='#'>Bookmarks</a>
+            <li>
+                <a href='#'>Something else here</a>
             </li>
-            <li class='launcher'>
-              <i class='icon-cloud'></i>
-              <a href='#'>Backup</a>
-            </li>
-            <li class='launcher'>
-              <i class='icon-bug'></i>
-              <a href='#'>Feedback</a>
-            </li>
-          </ul>
-          <div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
-        </section>
-        <!-- Tools -->
-        <section id='tools'>
-          <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
-            <li class='title'>Forms</li>
-          </ul>
-          <div id='toolbar'>
+        </ul>
+    </li>
+    <li class='launcher'>
+        <i class='icon-bookmark'></i>
+        <a href='#'>Bookmarks</a>
+    </li>
+    <li class='launcher'>
+        <i class='icon-cloud'></i>
+        <a href='#'>Backup</a>
+    </li>
+    <li class='launcher'>
+        <i class='icon-bug'></i>
+        <a href='#'>Feedback</a>
+    </li>
+</ul>
+<div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
+</section>
+<!-- Tools -->
+<section id='tools'>
+    <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
+      <li class='title'>Forms</li>
+  </ul>
+  <div id='toolbar'>
 
-          </div>
-        </section>
-        <!-- Content -->
-        <div id='content' style="background-color: #bdc3c7;">
-          <div class='panel panel-default'>
-            <div class='panel-heading' style="background-color: #2c3e50; color: white">
-              <i class='icon-edit icon-large'></i>
-             Employee
-            </div>
-            <div class='panel-body' style="background-color: #2c3e50; color: white">
-              <legend style="color: white">Upload Document</legend>
-              <%= form_for @employee, method: :put, url: wizard_path do |f| %>
-  <% if f.object.errors.any? %>
-    <div class="error_messages">
-      <% f.object.errors.full_messages.each do |error| %>
-        <p><%= error %></p>
-      <% end %>
+  </div>
+</section>
+<!-- Content -->
+<div id='content' style="background-color: #bdc3c7;">
+    <div class='panel panel-default'>
+      <div class='panel-heading' style="background-color: #2c3e50; color: white">
+        <i class='icon-edit icon-large'></i>
+        Employee
     </div>
-  <% end %>
-
-  <fieldset>
-    
-
-<div class="form-group">
-      <%= f.label :Adharcard, :class => 'control-label col-lg-2'  %>
-      <%= f.file_field :adharcard, :class => 'form-control' %>
-    </div>
-    
-    <div class="form-group">
-      <%= f.label :Pancard, :class => 'control-label col-lg-2' %>
-      <%= f.file_field :pan_card, :class => 'form-control' %>
-    </div>
-    
-    <div class="form-group">
-      <%= f.label :Passport, :class => 'control-label col-lg-2' %>
-      <%= f.file_field :passport, :class => 'form-control' %>
-    </div>
- <div class="form-group">
-      <%= f.label :Voter_card, :class => 'control-label col-lg-2' %>
-      <%= f.file_field :voter_card, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :Last_degree, :class => 'control-label col-lg-2' %>
-      <%= f.file_field :last_degree, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :Experience_certificate, :class => 'control-label col-lg-2' %>
-      <%= f.file_field :experience_certificate, :class => 'form-control' %>
-    </div>
-          <%#= f.check_box :adharcard %>
-         <%#= f.label :Adharcard%>
-          <%#= f.check_box :pan_card %>
-         <%#= f.label :Pancard%>
-       
-          <%#= f.check_box :passport %>
-         <%#= f.label :Passport%>
-     
-          <%#= f.check_box :voter_card %>
-         <%#= f.label :Voter_card%>
-    
-          <%#= f.check_box :last_degree %>
-         <%#= f.label :Last_degree%>
+    <div class='panel-body' style="background-color: #2c3e50; color: white">
         
-          <%#= f.check_box :experience_certificate %>
-         <%#= f.label :Experience_certificate%>
-          <br>
-    <div class="form-group">
-      <%= f.submit 'Next Step', :class => 'btn btn-success' %>
-    </div>
-  </fieldset>
-<% end %>
-
-            </div>
-          </div>
-          <div class='panel panel-default'>
-            <div class='panel-heading' style="background-color: #2c3e50; color: white">
-              <i class='icon-edit icon-large'></i>
-              <!--  Knob Inputs -->
-            </div>
-         <!--  <div class='panel-body text-center'>
-            <input class='knob' data-height='150' data-width='150' type='text' value='75'>
-            <input class='knob' data-fgColor='#16a085' data-height='150' data-width='150' type='text' value='100'>
-            <input class='knob' data-fgColor='#7f8c8d' data-height='150' data-width='150' type='text' value='200'>
-          </div> -->
-        </div>
+        <%= form_for @employee, method: :put, url: wizard_path do |f| %>
+        <% if f.object.errors.any? %>
+        <div class="error_messages">
+          <% f.object.errors.full_messages.each do |error| %>
+          <p><%= error %></p>
+          <% end %>
       </div>
-    </div>
-    <!-- Footer -->
-    <!-- Javascripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script><script src="assets/javascripts/application-985b892b.js" type="text/javascript"></script>
-    <!-- Google Analytics -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
+      <% end %>
+
+      <fieldset>
+          
+
+          <div class="form-group">
+            <%= f.label :Adharcard, :class => 'control-label col-lg-2'  %>
+            <%= f.file_field :adharcard, :class => 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :Pancard, :class => 'control-label col-lg-2' %>
+            <%= f.file_field :pan_card, :class => 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :Passport, :class => 'control-label col-lg-2' %>
+            <%= f.file_field :passport, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= f.label :Voter_card, :class => 'control-label col-lg-2' %>
+            <%= f.file_field :voter_card, :class => 'form-control' %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :Last_degree, :class => 'control-label col-lg-2' %>
+            <%= f.file_field :last_degree, :class => 'form-control' %>
+        </div>
+
+        <div class="form-group">
+            <%= f.label :Experience_certificate, :class => 'control-label col-lg-2' %>
+            <%= f.file_field :experience_certificate, :class => 'form-control' %>
+        </div>
+        <br>
+        <div class="form-group">
+            <%= f.submit 'Submit', :class => 'btn btn-success' %>
+        </div>
+    </fieldset>
+    <% end %>
+
+</div>
+</div>
+<div class='panel panel-default'>
+  <div class='panel-heading' style="background-color: #2c3e50; color: white">
+    <i class='icon-edit icon-large'></i>
+    <!--  Knob Inputs -->
+</div>
+
+</div>
+</div>
+</div>
+<!-- Footer -->
+<!-- Javascripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script><script src="assets/javascripts/application-985b892b.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+<script>
+  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>

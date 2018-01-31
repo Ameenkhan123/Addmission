@@ -1,130 +1,128 @@
 
-  <div id='wrapper'>
-    <!-- Sidebar -->
-    <section id='sidebar'>
-      <i class='icon-align-justify icon-large' id='toggle'></i>
-      <ul id='dock'>
-        <li class='launcher'>
-          <i class='icon-dashboard'></i>
-          <a href="dashboard.html">Dashboard</a>
-        </li>
-        <li class='active launcher'>
-          <i class='icon-file-text-alt'></i>
-          <a><%= link_to 'Form',
-            new_employee_path %></a>
-          </li>
-          <li class='launcher'>
-            <i class='icon-table'></i>
-            <a ><%= link_to 'Tables',
-              employees_path %></a>
-            </li>
-            <li class='launcher dropdown hover'>
-              <i class='icon-flag'></i>
-              <a href='#'>Reports</a>
-              <ul class='dropdown-menu'>
-                <li class='dropdown-header'>Launcher description</li>
-                <li>
-                  <a href='#'>Action</a>
-                </li>
-                <li>
-                  <a href='#'>Another action</a>
-                </li>
-                <li>
-                  <a href='#'>Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class='launcher'>
-              <i class='icon-bookmark'></i>
-              <a href='#'>Bookmarks</a>
-            </li>
-            <li class='launcher'>
-              <i class='icon-cloud'></i>
-              <a href='#'>Backup</a>
-            </li>
-            <li class='launcher'>
-              <i class='icon-bug'></i>
-              <a href='#'>Feedback</a>
-            </li>
-          </ul>
-          <div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
-        </section>
-        <!-- Tools -->
-        <section id='tools'>
-          <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
-            <li class='title'>Forms</li>
-          </ul>
-          <div id='toolbar'>
+<div id='wrapper'>
+	<!-- Sidebar -->
+	<section id='sidebar'>
+		<i class='icon-align-justify icon-large' id='toggle'></i>
+		<ul id='dock'>
+			<li class='launcher'>
+				<i class='icon-dashboard'></i>
+				<a href="dashboard.html">Dashboard</a>
+			</li>
+			<li class='active launcher'>
+				<i class="glyphicon glyphicon-user"></i>
+				<a><%= link_to 'Addmission',
+					new_employee_path %></a>
+				</li>
+				<li class='launcher'>
+					<i class='icon-table'></i>
+					<a ><%= link_to 'Tables',
+						employees_path %></a>
+					</li>
+					<li class='launcher dropdown hover'>
+						<i class='icon-flag'></i>
+						<a href='#'>Reports</a>
+						<ul class='dropdown-menu'>
+							<li class='dropdown-header'>Launcher description</li>
+							<li>
+								<a href='#'>Action</a>
+							</li>
+							<li>
+								<a href='#'>Another action</a>
+							</li>
+							<li>
+								<a href='#'>Something else here</a>
+							</li>
+						</ul>
+					</li>
+					<li class='launcher'>
+						<i class='icon-bookmark'></i>
+						<a href='#'>Bookmarks</a>
+					</li>
+					<li class='launcher'>
+						<i class='icon-cloud'></i>
+						<a href='#'>Backup</a>
+					</li>
+					<li class='launcher'>
+						<i class='icon-bug'></i>
+						<a href='#'>Feedback</a>
+					</li>
+				</ul>
+				<div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
+			</section>
+			<!-- Tools -->
+			<section id='tools'>
+				<ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
+					<li class='title'>Forms</li>
+				</ul>
+				<div id='toolbar'>
 
-          </div>
-        </section>
-        <!-- Content -->
-        <div id='content' style="background-color: #bdc3c7;">
-          <div class='panel panel-default'>
-            <div class='panel-heading' style="background-color: #2c3e50; color: white">
-              <i class='icon-edit icon-large' ></i>
-              Form Default
-            </div>
-            <div class='panel-body' style="background-color: #2c3e50; color: white">
-              <legend style="color: white">Employee</legend>
-              <%= form_for @employee, method: :put, url: wizard_path do |f| %>
-              <% if f.object.errors.any? %>
-              <div class="error_messages">
-               <% f.object.errors.full_messages.each do |error| %>
-               <p><%= error %></p>
-               <% end %>
-             </div>
-             <% end %>
+				</div>
+			</section>
+			<!-- Content -->
+			<div id='content' style="background-color: #bdc3c7;">
+				<div class='panel panel-default'>
+					<div class='panel-heading' style="background-color: #2c3e50; color: white">
+						<i class='icon-edit icon-large' ></i>
+						Employee
+					</div>
+					<div class='panel-body' style="background-color: #2c3e50; color: white">
+						<%= form_for @employee, method: :put, url: wizard_path do |f| %>
+						<% if f.object.errors.any? %>
+						<div class="error_messages">
+							<% f.object.errors.full_messages.each do |error| %>
+							<p><%= error %></p>
+							<% end %>
+						</div>
+						<% end %>
 
-             <fieldset >
-               <legend style="color: white"> Profile </legend>
+						<fieldset >
 
-               <div class="form-group">
-                <%= f.label :joining_date, :class => 'control-label col-lg-2' %><br>
-                <%= f.date_field :joining_date, :class => 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :first_name, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :first_name, :class => 'form-control' %>
-              </div>
+							<div class="form-group">
+								<%= f.label :joining_date, :class => 'control-label col-lg-2' %><br>
+								<%= f.date_field :joining_date, :class => 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= f.label :first_name, :class => 'control-label col-lg-2' %><br>
+								<%= f.text_field :first_name, :class => 'form-control' %>
+							</div>
 
-              <div class="form-group">
-                <%= f.label :last_name, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :last_name, :class => 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :dob, :class => 'control-label col-lg-2' %><br>
-                <%= f.date_field :dob, :class => 'form-control' %>
-              </div>
+							<div class="form-group">
+								<%= f.label :last_name, :class => 'control-label col-lg-2' %><br>
+								<%= f.text_field :last_name, :class => 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= f.label :dob, :class => 'control-label col-lg-2' %><br>
+								<%= f.date_field :dob, :class => 'form-control' %>
+							</div>
 
-              <div class="form-group">
-                <%= f.label :gender, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :gender, :class => 'form-control' %>
-              </div>
+							<div class="form-group">
+								<%= f.label :gender, :class => 'control-label col-lg-2' %><br>
+								<%= f.text_field :gender, :class => 'form-control' %>
+							</div>
 
-              <div class="form-group">
-                <%= f.label :department, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :department, :class => 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :position, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :position, :class => 'form-control' %>
-              </div>
-              <!-- <h1>Contact</h1> -->
-              <div class="form-group">
-                <%= f.label :job_title, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :job_title, :class => 'form-control' %>
-              </div><div class="form-group">
-              <%= f.label :qualification, :class => 'control-label col-lg-2' %><br>
-              <%= f.text_field :qualification, :class => 'form-control' %>
-            </div><div class="form-group">
-            <%= f.label :experience, :class => 'control-label col-lg-2' %><br>
-            <%= f.text_field :experience, :class => 'form-control' %>
-          </div>
-          <div class="form-group">
-           <%= f.label :maritel_status, :class => 'control-label col-lg-2' %><br>
-           <%= f.text_field :maritel_status, :class => 'form-control' %>
-         </div>
+							<div class="form-group">
+								<%= f.label :department, :class => 'control-label col-lg-2' %><br>
+								<%= f.text_field :department, :class => 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= f.label :position, :class => 'control-label col-lg-2' %><br>
+								<%= f.text_field :position, :class => 'form-control' %>
+							</div>
+							<!-- <h1>Contact</h1> -->
+							<div class="form-group">
+								<%= f.label :job_title, :class => 'control-label col-lg-2' %><br>
+								<%= f.text_field :job_title, :class => 'form-control' %>
+							</div><div class="form-group">
+							<%= f.label :qualification, :class => 'control-label col-lg-2' %><br>
+							<%= f.text_field :qualification, :class => 'form-control' %>
+						</div><div class="form-group">
+						<%= f.label :experience, :class => 'control-label col-lg-2' %><br>
+						<%= f.text_field :experience, :class => 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :maritel_status, :class => 'control-label col-lg-2' %><br>
+						<%= f.text_field :maritel_status, :class => 'form-control' %>
+					</div>
 <!-- <div class="form-group">
 	<%= f.label :qualification, :class => 'control-label col-lg-2' %><br>
 	<%= f.text_field :qualification, :class => 'form-control' %>
@@ -154,32 +152,27 @@
 	<%= f.file_field :photo, :class => 'form-control' %>
 </div> <br>
 <div class="form-group">
-  <%= f.submit 'Next Step', :class => 'btn btn-success' %>
+	<%= f.submit 'Submit', :class => 'btn btn-success' %>
 </div>
 </fieldset>
 <% end %>
 </div>
 </div>
 <div class='panel panel-default'>
-  <div class='panel-heading' style="background-color: #2c3e50; color: white">
-    <i class='icon-edit icon-large'></i>
-    <!--  Knob Inputs -->
-  </div>
-         <!--  <div class='panel-body text-center'>
-            <input class='knob' data-height='150' data-width='150' type='text' value='75'>
-            <input class='knob' data-fgColor='#16a085' data-height='150' data-width='150' type='text' value='100'>
-            <input class='knob' data-fgColor='#7f8c8d' data-height='150' data-width='150' type='text' value='200'>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
-    <!-- Javascripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script><script src="assets/javascripts/application-985b892b.js" type="text/javascript"></script>
-    <!-- Google Analytics -->
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
+	<div class='panel-heading' style="background-color: #2c3e50; color: white">
+		<i class='icon-edit icon-large'></i>
+		<!--  Knob Inputs -->
+	</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<!-- Javascripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script><script src="assets/javascripts/application-985b892b.js" type="text/javascript"></script>
+<!-- Google Analytics -->
+<script>
+	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>

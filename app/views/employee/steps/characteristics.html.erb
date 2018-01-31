@@ -8,8 +8,8 @@
           <a href="dashboard.html">Dashboard</a>
         </li>
         <li class='active launcher'>
-          <i class='icon-file-text-alt'></i>
-          <a><%= link_to 'Form',
+          <i class="glyphicon glyphicon-user"></i>
+          <a><%= link_to 'Addmission',
             new_employee_path %></a>
           </li>
           <li class='launcher'>
@@ -58,74 +58,68 @@
           </div>
         </section>
         <!-- Content -->
-        <div id='content'>
+        <div id='content' style="background-color: #bdc3c7;">
           <div class='panel panel-default'>
             <div class='panel-heading' style="background-color: #2c3e50; color: white">
               <i class='icon-edit icon-large'></i>
               Employee
             </div>
             <div class='panel-body' style="background-color: #2c3e50; color: white">
-              <legend style="color: white"> profile </legend>
              <%= form_for @employee, method: :put, url: wizard_path do |f| %>
-  <% if f.object.errors.any? %>
-    <div class="error_messages">
-      <% f.object.errors.full_messages.each do |error| %>
-        <p><%= error %></p>
-      <% end %>
-    </div>
-  <% end %>
-
-  <fieldset>
-  
-
-    <div class="form-group">
-      <%= f.label :address_line1, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :address_line1, :class => 'form-control' %>
-    </div>
-      <div class="form-group">
-      <%= f.label :address_line2, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :address_line2, :class => 'form-control' %>
-    </div class="form-group">
-      <div>
-      <%= f.label :city, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :city, :class => 'form-control' %>
-    </div>
-      <div class="form-group">
-      <%= f.label :state, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :state, :class => 'form-control' %>
-    </div>
-      <div class="form-group">
-      <%= f.label :Pincode, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :pincode, :class => 'form-control' %>
-    </div>
-      <div class="form-group">
-      <%= f.label :Phone_no, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :phone_no, :class => 'form-control' %>
-    </div>
-      <div class="form-group">
-      <%= f.label :email, :class => 'control-label col-lg-2'%><br>
-      <%= f.text_field :email, :class => 'form-control' %>
-    </div>
-
-    <div>
-      <%= f.submit 'Next Step', :class => 'btn btn-success' %>
-    </div>
-  </fieldset>
-<% end %>
-
-
+             <% if f.object.errors.any? %>
+             <div class="error_messages">
+              <% f.object.errors.full_messages.each do |error| %>
+              <p><%= error %></p>
+              <% end %>
             </div>
+            <% end %>
+
+            <fieldset>
+              
+
+              <div class="form-group">
+                <%= f.label :address_line1, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :address_line1, :class => 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :address_line2, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :address_line2, :class => 'form-control' %>
+              </div class="form-group">
+              <div>
+                <%= f.label :city, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :city, :class => 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :state, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :state, :class => 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :Pincode, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :pincode, :class => 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :Phone_no, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :phone_no, :class => 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :email, :class => 'control-label col-lg-2'%><br>
+                <%= f.text_field :email, :class => 'form-control' %>
+              </div>
+
+              <div>
+                <%= f.submit 'Submit', :class => 'btn btn-success' %>
+              </div>
+            </fieldset>
+            <% end %>
+
+
           </div>
-          <div class='panel panel-default'>
-            <div class='panel-heading' style="background-color: #2c3e50; color: white">
-              <i class='icon-edit icon-large'></i>
-              <!--  Knob Inputs -->
-            </div>
-         <!--  <div class='panel-body text-center'>
-            <input class='knob' data-height='150' data-width='150' type='text' value='75'>
-            <input class='knob' data-fgColor='#16a085' data-height='150' data-width='150' type='text' value='100'>
-            <input class='knob' data-fgColor='#7f8c8d' data-height='150' data-width='150' type='text' value='200'>
-          </div> -->
+        </div>
+        <div class='panel panel-default'>
+          <div class='panel-heading' style="background-color: #2c3e50; color: white">
+            <i class='icon-edit icon-large'></i>
+            <!--  Knob Inputs -->
+          </div>
         </div>
       </div>
     </div>
