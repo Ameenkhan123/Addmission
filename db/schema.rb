@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180124064940) do
+ActiveRecord::Schema.define(version: 20180131052955) do
 
   create_table "employees", force: :cascade do |t|
     t.integer "employee_id"
@@ -80,6 +80,8 @@ ActiveRecord::Schema.define(version: 20180124064940) do
     t.datetime "updated_at", null: false
     t.float "longitude"
     t.float "latitude"
+    t.string "ocupasion"
+    t.string "income"
   end
 
 end
