@@ -31,7 +31,7 @@ class EmployeesController < ApplicationController
   # DELETE /pets/1
   # DELETE /pets/1.json
   def destroy
-      @employee = Employee.find(params[:id])
+      @employee = Employee.friendly.find(params[:id])
         @employee.destroy
         redirect_to employees_path
   end
