@@ -34,7 +34,7 @@ class StudentsController < ApplicationController
   # DELETE /pets/1
   # DELETE /pets/1.json
   def destroy
-      @student = Student.find(params[:id])
+      @student = Student.friendly.find(params[:id])
         @student.destroy
         redirect_to students_path
   end
