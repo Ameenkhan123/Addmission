@@ -98,11 +98,11 @@
 
               <div class="form-group">
                 <%= f.label :gender, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :gender, :class => 'form-control' %>
+                <%= f.select(:gender, [ 'Male', 'Female' ], {}, { :class => 'form-control' }) %>
               </div>
               <div class="form-group">
                 <%= f.label :blood_group, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :blood_group, :class => 'form-control' %>
+                <%= f.select(:blood_group, ['A+', 'A-','B+', 'B-','AB+', 'AB-','O+', 'O-' ], {}, { :class => 'select form-control' }) %>
               </div>
 
               <div>
@@ -115,11 +115,11 @@
               </div>
               <div class="form-group">
                 <%= f.label :class, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :student_class, :class => 'form-control' %>
+                <%= f.select(:student_class, ['8th','9th','10th', '11th','12th'], {}, { :class => 'select form-control' }) %>
               </div>
               <div class="form-group">
                 <%= f.label :session, :class => 'control-label col-lg-2' %><br>
-                <%= f.text_field :session, :class => 'form-control' %>
+                 <%= f.select(:student_class, ['2012','2013', '2014','2015','2016','2017','2018'], {}, { :class => 'select form-control' }) %>
               </div>
               <!-- <h1>Contact</h1> -->
               <div class="form-group">

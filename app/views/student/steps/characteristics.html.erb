@@ -52,8 +52,6 @@
       <section id='tools'>
         <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
           <li class='title'>Forms</li>
-           <!--  <li><a href="#">Student</a></li>
-           <li class='active'><a href="#">Profile</a></li> -->
          </ul>
          <div id='toolbar'>
 
@@ -91,10 +89,8 @@
             <div class="form-group">
               <%= f.label :income , :class => 'control-label col-lg-2' %>
               <br />
-              <%= f.text_area :income, :class => 'form-control' %>
-            </div>
-
-            
+              <%= f.text_field :income, :class => 'form-control' %>
+            </div>            
             <div class="form-group">
               <%= f.label :mother_name , :class => 'control-label col-lg-2'%><br>
               <%= f.text_field :mother_name, :class => 'form-control' %>

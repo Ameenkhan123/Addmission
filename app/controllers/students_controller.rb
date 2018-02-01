@@ -1,9 +1,6 @@
 class StudentsController < ApplicationController
-	 # GET /pets
-  # GET /pets.json
+
   def index
-    # Normally you'd have more complex requirements about
-    # when not to show rows, but we don't show any records that don't have a name
     @students = Student.where.not(Firstname: nil)
     # @students = Student.search(params[:student])
     @students = Student.order('addmission_date')
@@ -12,27 +9,24 @@ class StudentsController < ApplicationController
 
   end
 
-  # GET /pets/1
-  # GET /pets/1.json
+ 
   def show
     @student = Student.friendly.find(params[:id])
   end
 
-  # GET /pets/new
+
   def new
   	@student = Student.new
   end
 
-  # POST /pets
-  # POST /pets.json
+
   def create
   	@student = Student.new(student_params)
   	@student.save(validate: false)
   	redirect_to student_step_path(@student, Student.form_steps.first)
   end
 
-  # DELETE /pets/1
-  # DELETE /pets/1.json
+
   def destroy
       @student = Student.friendly.find(params[:id])
         @student.destroy
