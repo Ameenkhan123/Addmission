@@ -75,58 +75,59 @@
             <% end %>
 
             <fieldset>
-             <!--  <legend></legend> -->
+         <div class="col-lg-6 left">
              <div class="form-group">
-              <%= f.label :father_Name , :class => 'control-label col-lg-2' %>
+              <%= f.label :Father_Name %>
               <br />
               <%= f.text_field :father_name, rows: 10, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :ocupasion , :class => 'control-label col-lg-2' %>
+              <%= f.label :Ocupasion %>
               <br />
               <%= f.text_field :ocupasion, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :income , :class => 'control-label col-lg-2' %>
+              <%= f.label :Income %>
               <br />
               <%= f.text_field :income, :class => 'form-control' %>
             </div>            
             <div class="form-group">
-              <%= f.label :mother_name , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :Mother_Name%><br>
               <%= f.text_field :mother_name, :class => 'form-control' %>
             </div>
             
             <div class="form-group">
-              <%= f.label :address_line1 , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :Address_Line1 %><br>
               <%= f.text_field :address_line1, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :address_line2 , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :Address_Line2 %><br>
               <%= f.text_field :address_line2, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :city , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :City%><br>
               <%= f.text_field :city, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :state , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :State%><br>
               <%= f.text_field :state, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :pincode , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :Pincode %><br>
               <%= f.text_field :pincode, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :Phone_no , :class => 'control-label col-lg-2'%>
+              <%= f.label :Phone_Number%>
               <%= f.text_field :phone_no, :class => 'form-control' %>
             </div>
             <div class="form-group">
-              <%= f.label :emergency_no , :class => 'control-label col-lg-2'%><br>
+              <%= f.label :Emergency_Number %><br>
               <%= f.text_field :emergency_no, :class => 'form-control' %>
             </div>
 
             <div class="form-group">
               <%= f.submit 'Submit', :class => 'btn btn-success' %>
+            </div>
             </div>
           </fieldset>
           <% end %>

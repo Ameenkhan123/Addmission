@@ -77,38 +77,40 @@
 
       <fieldset>
           
+ <div class="col-lg-6 left" >
 
           <div class="form-group">
-            <%= f.label :Adharcard, :class => 'control-label col-lg-2'  %>
+            <%= f.label :Adharcard  %>
             <%= f.file_field :adharcard, :class => 'form-control' %>
         </div>
         
         <div class="form-group">
-            <%= f.label :Pancard, :class => 'control-label col-lg-2' %>
+            <%= f.label :Pan_Card %>
             <%= f.file_field :pan_card, :class => 'form-control' %>
         </div>
         
         <div class="form-group">
-            <%= f.label :Passport, :class => 'control-label col-lg-2' %>
+            <%= f.label :Pass_Port %>
             <%= f.file_field :passport, :class => 'form-control' %>
         </div>
         <div class="form-group">
-            <%= f.label :Voter_card, :class => 'control-label col-lg-2' %>
+            <%= f.label :Voter_Card %>
             <%= f.file_field :voter_card, :class => 'form-control' %>
         </div>
 
         <div class="form-group">
-            <%= f.label :Last_degree, :class => 'control-label col-lg-2' %>
+            <%= f.label :Last_Degree %>
             <%= f.file_field :last_degree, :class => 'form-control' %>
         </div>
 
         <div class="form-group">
-            <%= f.label :Experience_certificate, :class => 'control-label col-lg-2' %>
+            <%= f.label :Experience_Certificate %>
             <%= f.file_field :experience_certificate, :class => 'form-control' %>
         </div>
         <br>
         <div class="form-group">
             <%= f.submit 'Submit', :class => 'btn btn-success' %>
+        </div>
         </div>
     </fieldset>
     <% end %>

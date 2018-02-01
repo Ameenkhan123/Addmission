@@ -75,36 +75,35 @@
             <% end %>
 
             <fieldset>
-             <!--    <legend> </legend> -->
-
-             
+      <div class="col-lg-6 left">
              <div class="form-group" >
-              <%= f.label :previous_school_name, :class => 'control-label col-lg-2' %><br>
+              <%= f.label :Previous_School_Name, :class => 'control-label col-lg-2' %><br>
               <%= f.text_field :previous_school_name, :class => 'form-control' %>
             </div  >
             
             <div class="form-group">
-              <%= f.label :obtained, :class => 'control-label col-lg-2' %><br>
+              <%= f.label :Obtained %><br>
               <%= f.text_field :obtained, :class => 'form-control' %>
             </div >
 
 
             <div class="form-group" >
-              <%= f.label :previous_class, :class => 'control-label col-lg-2' %><br>
+              <%= f.label :Previous_Class %><br>
               <%= f.text_field :previous_class, :class => 'form-control' %>
             </div>
             <div class="form-group" >
-              <%= f.label :Adharcard, :class => 'control-label col-lg-2' %><br>
+              <%= f.label :Adharcard %><br>
               <%= f.file_field :adharcard, :class => 'form-control' %>
             </div>
 
             <div class="form-group" >
-              <%= f.label :previous_school_marksheet, :class => 'control-label col-lg-2' %><br>
+              <%= f.label :Previous_School_Marksheet %><br>
               <%= f.file_field :previous_school_marksheet, :class => 'form-control' %>
             </div>
             <br>
             <div class="form-group" >
               <%= f.submit 'Submit', :class => 'btn btn-success' %>
+            </div>
             </div>
           </fieldset>
           <% end %>

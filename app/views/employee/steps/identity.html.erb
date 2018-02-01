@@ -76,81 +76,82 @@
 						<% end %>
 
 						<fieldset >
-
+<div class="col-lg-6 left">
 							<div class="form-group">
-								<%= f.label :joining_date, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Joining_Date %><br>
 								<%= f.date_field :joining_date, :class => 'form-control' %>
 							</div>
 							<div class="form-group">
-								<%= f.label :first_name, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :First_Name %><br>
 								<%= f.text_field :first_name, :class => 'form-control' %>
 							</div>
 
 							<div class="form-group">
-								<%= f.label :last_name, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Last_Name %><br>
 								<%= f.text_field :last_name, :class => 'form-control' %>
 							</div>
 							<div class="form-group">
-								<%= f.label :dob, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Dob %><br>
 								<%= f.date_field :dob, :class => 'form-control' %>
 							</div>
 
 							<div class="form-group">
-								<%= f.label :gender, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Gender %><br>
 								<%= f.select(:gender, [ 'Male', 'Female' ], {}, { :class => 'select form-control' }) %>
 							</div>
 
 							<div class="form-group">
-								<%= f.label :department, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Department %><br>
 								<%= f.select(:department, [ 'Computer Science', 'Information Technology'], {}, { :class => 'select form-control' }) %>
 							</div>
 							<div class="form-group">
-								<%= f.label :position, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Position%><br>
 								<%= f.select(:position, [ 'Software developers', '  Software developers, applications','Web Developers','Computer and Information Systems Managers','Computer Hardware Engineers', 'Computer Network Architects','Computer Programmers', 'Computer Support Specialists
 
 									', 'Computer Systems Analysts','Database Administrators'], {}, { :class => 'select form-control' }) %>
 								</div>
 								<!-- <h1>Contact</h1> -->
 								<div class="form-group">
-									<%= f.label :job_title, :class => 'control-label col-lg-2' %><br>
+									<%= f.label :Job_Title %><br>
 									<%= f.text_field :job_title, :class => 'form-control' %>
 								</div><div class="form-group">
-								<%= f.label :qualification, :class => 'control-label col-lg-2' %><br>
+								<%= f.label :Qualification %><br>
 								<%= f.text_field :qualification, :class => 'form-control' %>
 							</div><div class="form-group">
-							<%= f.label :experience, :class => 'control-label col-lg-2' %><br>
+							<%= f.label :Experience %><br>
 							<%= f.text_field :experience, :class => 'form-control' %>
 						</div>
 						<div class="form-group">
-							<%= f.label :maritel_status, :class => 'control-label col-lg-2' %><br>
+							<%= f.label :Maritel_Status %><br>
 							<%= f.select(:maritel_status, [ 'Yes', 'No'], {}, { :class => 'select form-control' }) %>
 						</div>
 						<div class="form-group">
-							<%= f.label :father_name, :class => 'control-label col-lg-2' %><br>
+							<%= f.label :Father_Name %><br>
 							<%= f.text_field :father_name, :class => 'form-control' %>
 						</div>
 						<div class="form-group">
-							<%= f.label :mother_name, :class => 'control-label col-lg-2' %><br>
+							<%= f.label :Mother_Name %><br>
 							<%= f.text_field :mother_name, :class => 'form-control' %>
 						</div>
 						<div class="form-group">
-							<%= f.label :spocecom, :class => 'control-label col-lg-2' %><br>
+							<%= f.label :Spocecom %><br>
 							<%= f.text_field :spocecom, :class => 'form-control' %>
 						</div>
 
 						<div class="form-group">
-							<%= f.label :blood_group, :class => 'control-label col-lg-2' %><br>
+							<%= f.label :Blood_Group %><br>
 							<%= f.select(:blood_group, ['A+', 'A-','B+', 'B-','AB+', 'AB-','O+', 'O-' ], {}, { :class => 'select form-control' }) %>
 						</div>
 						<br>
 						<h1>upload photo</h1>
 						<div class="form-group">
-							<%= f.label :photo, :class => 'control-label col-lg-2' %>
+							<%= f.label :Photo %>
 							<br>
 							<%= f.file_field :photo, :class => 'form-control' %>
 						</div> <br>
 						<div class="form-group">
 							<%= f.submit 'Submit', :class => 'btn btn-success' %>
+						</div>
 						</div>
 					</fieldset>
 					<% end %>
