@@ -6,118 +6,127 @@
         <li class='launcher'>
           <i class='icon-dashboard'></i>
           <a href="dashboard.html">Dashboard</a>
-      </li>
-      <li class='active launcher'>
-          <i class="glyphicon glyphicon-user"></i>
-          <a><%= link_to 'Addmission',
-            new_employee_path %></a>
+        </li>
+        <li class='active launcher'>
+         <i class="icofont icofont-user-male"></i>
+         <a><%= link_to 'Addmission',
+          new_employee_path %></a>
         </li>
         <li class='launcher'>
-            <i class='icon-table'></i>
-            <a ><%= link_to 'Tables',
-              employees_path %></a>
+          <i class='icon-table'></i>
+          <a ><%= link_to 'Tables',
+            employees_path %></a>
           </li>
           <li class='launcher dropdown hover'>
-              <i class='icon-flag'></i>
-              <a href='#'>Reports</a>
-              <ul class='dropdown-menu'>
-                <li class='dropdown-header'>Launcher description</li>
-                <li>
-                  <a href='#'>Action</a>
+            <i class='icon-flag'></i>
+            <a href='#'>Reports</a>
+            <ul class='dropdown-menu'>
+              <li class='dropdown-header'>Launcher description</li>
+              <li>
+                <a href='#'>Action</a>
               </li>
               <li>
-                  <a href='#'>Another action</a>
+                <a href='#'>Another action</a>
               </li>
               <li>
-                  <a href='#'>Something else here</a>
+                <a href='#'>Something else here</a>
               </li>
+            </ul>
+          </li>
+          <li class='launcher'>
+            <i class='icon-bookmark'></i>
+            <a href='#'>Bookmarks</a>
+          </li>
+          <li class='launcher'>
+            <i class='icon-cloud'></i>
+            <a href='#'>Backup</a>
+          </li>
+          <li class='launcher'>
+            <i class='icon-bug'></i>
+            <a href='#'>Feedback</a>
+          </li>
+        </ul>
+        <div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
+      </section>
+      <!-- Tools -->
+      <section id='tools'>
+        <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
+          <li class='title'>Forms</li>
+        </ul>
+        <div id='toolbar'>
+
+        </div>
+      </section>
+      <!-- Content -->
+      <div id='content' style="background-color: #bdc3c7;">
+        <div class='panel panel-default'>
+          <div class='panel-heading' style="background-color: #2c3e50; color: white">
+            <i class='icon-edit icon-large'></i>
+            Employee
+          </div>
+          <div class='panel-body'  style="background-color: #2c3e50; color: white" >
+            <%= form_for @employee, :html => { :class => "" } do |f| %>
+
+            <% if @employee.errors.any? %>
+            <%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h3>
+          </div>
+          <ul>
+            <% @employee.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
           </ul>
-      </li>
-      <li class='launcher'>
-          <i class='icon-bookmark'></i>
-          <a href='#'>Bookmarks</a>
-      </li>
-      <li class='launcher'>
-          <i class='icon-cloud'></i>
-          <a href='#'>Backup</a>
-      </li>
-      <li class='launcher'>
-          <i class='icon-bug'></i>
-          <a href='#'>Feedback</a>
-      </li>
-  </ul>
-  <div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
-</section>
-<!-- Tools -->
-<section id='tools'>
-  <ul class='breadcrumb' id='breadcrumb' style="background-color: #2c3e50; color: white">
-    <li class='title'>Forms</li>
-</ul>
-<div id='toolbar'>
-
-</div>
-</section>
-<!-- Content -->
-<div id='content' style="background-color: #bdc3c7;">
-  <div class='panel panel-default'>
-    <div class='panel-heading' style="background-color: #2c3e50; color: white">
-      <i class='icon-edit icon-large'></i>
-      Employee
-  </div>
-  <div class='panel-body'  style="background-color: #2c3e50; color: white" >
-      <%= form_for @employee, :html => { :class => "" } do |f| %>
-
-      <% if @employee.errors.any? %>
-      <%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h3>
-  </div>
-  <ul>
-      <% @employee.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+        </div>
+      </div>
       <% end %>
-  </ul>
-</div>
-</div>
-<% end %>
-<div id="page-wrapper" >
+      <div id="page-wrapper" >
+        <!-- Header -->
+        <div id="header">
+          <!-- Inner -->
+          <div class="inner" >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 left">
+        <center>
+          
+          <i class="icofont icofont-architecture-alt"  style="font-size: 100px; "></i><br>
+          <strong>Employee</strong>
+        </center>
+        <div class="form-group">
+          <%= f.label :First_name %><br>
+          <%= f.text_field :first_name, :class => 'form-control' %>
+        </div>
 
-  <!-- Header -->
-  <div id="header">
+        <div class="form-group">
+          <%= f.label :Last_name %><br>
+          <%= f.text_field :last_name, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <div class="control-label col-lg-2'">
+            
+            <%= f.submit "Submit", :class => 'btn btn-primary' %>
 
-    <!-- Inner -->
-    <div class="inner" >
-    </div>
-</div>
-</div>
-<div class="col-lg-6 left"><br>
-<div class="form-group">
-  <%= f.label :First_name %><br>
-  <%= f.text_field :first_name, :class => 'form-control' %>
-</div>
+            <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            employees_path, :class => 'btn btn-default' %>
+          </div>
+        </div>
 
-<div class="form-group">
-  <%= f.label :Last_name %><br>
-  <%= f.text_field :last_name, :class => 'form-control' %>
-</div>
-<div class="form-group">
-    <div class="control-label col-lg-2'">
+        <% end %>
+      </div>
+      <i class="icofont icofont-group-students icon" style="font-size: 100px;">
         
-      <%= f.submit "Submit", :class => 'btn btn-primary' %>
+      </i><br>
+      <%= link_to 'Student Addmission',
+      new_student_path, :class => 'icon' %>
+    </div>
 
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-      employees_path, :class => 'btn btn-default' %>
+    <div class='panel panel-default' >
+      <div class='panel-heading' style="background-color: #2c3e50; color: white">
+        <i class='icon-edit icon-large' ></i>
+        <!--  Knob Inputs -->
+      </div>
+    </div>
   </div>
-</div>
-
-<% end %>
-</div>
-</div>
-<div class='panel panel-default' >
-  <div class='panel-heading' style="background-color: #2c3e50; color: white">
-    <i class='icon-edit icon-large' ></i>
-    <!--  Knob Inputs -->
-</div>
-</div>
-</div>
 </div>
 <!-- Footer -->
 <!-- Javascripts -->
@@ -128,4 +137,4 @@
   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
+  </script>

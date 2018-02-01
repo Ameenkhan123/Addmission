@@ -8,7 +8,7 @@
           <a href="dashboard.html">Dashboard</a>
         </li>
         <li class='active launcher'>
-          <i class="glyphicon glyphicon-user"></i>
+         <i class="icofont icofont-user-male"></i>
           <a><%= link_to 'Addmission',
             new_student_path %></a>
           </li>
@@ -65,7 +65,7 @@
               Student
             </div>
             <div class='panel-body' style="background-color: #2c3e50; color: white">
-              
+
               <%= form_for @student, method: :put, url: wizard_path do |f| %>
               <% if f.object.errors.any? %>
               <div class="error_messages">
@@ -76,84 +76,87 @@
              <% end %>
 
              <fieldset>
- <div class="col-lg-6 left">               
+               <div class="col-lg-6 left">   
+                <center>                  
+                  <i class="icofont icofont-group-students " style="font-size: 100px;"></i><br>
+                </center>            
+                <div class="form-group">
+                  <%= f.label :Addmission_Date %><br>
+                  <%= f.date_field :addmission_date, :class => 'form-control' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :First_Name %><br>
+                  <%= f.text_field :first_name, :class => 'form-control' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :Last_Name %><br>
+                  <%= f.text_field :last_name, :class => 'form-control' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :Dob %><br>
+                  <%= f.date_field :dob, :class => 'form-control' %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.label :Gender %><br>
+                  <%= f.select(:gender, [ 'Male', 'Female' ], {}, { :class => 'form-control' }) %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :Blood_group %><br>
+                  <%= f.select(:blood_group, ['A+', 'A-','B+', 'B-','AB+', 'AB-','O+', 'O-' ], {}, { :class => 'select form-control' }) %>
+                </div>
+
+                <div>
+                  <%= f.label :Birth_Place %><br>
+                  <%= f.text_field :birth_place, :class => 'form-control' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :Category %><br>
+                  <%= f.text_field :category, :class => 'form-control' %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :Student_Class %><br>
+                  <%= f.select(:student_class, ['8th','9th','10th', '11th','12th'], {}, { :class => 'select form-control' }) %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :Session %><br>
+                  <%= f.select(:student_class, ['2012','2013', '2014','2015','2016','2017','2018'], {}, { :class => 'select form-control' }) %>
+                </div>
+                <!-- <h1>Contact</h1> -->
+                <div class="form-group">
+                  <%= f.label :Address_Line1 %><br>
+                  <%= f.text_field :address_line1, :class => 'form-control' %>
+                </div>
+                <div class="form-group">
+                 <%= f.label :Address_Line2 %><br>
+                 <%= f.text_field :address_line2, :class => 'form-control' %>
+               </div>
                <div class="form-group">
-                <%= f.label :Addmission_Date %><br>
-                <%= f.date_field :addmission_date, :class => 'form-control' %>
+                <%= f.label :City %><br>
+                <%= f.text_field :city, :class => 'form-control' %>
               </div>
               <div class="form-group">
-                <%= f.label :First_Name %><br>
-                <%= f.text_field :first_name, :class => 'form-control' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label :Last_Name %><br>
-                <%= f.text_field :last_name, :class => 'form-control' %>
+                <%= f.label :State %><br>
+                <%= f.text_field :state, :class => 'form-control' %>
               </div>
               <div class="form-group">
-                <%= f.label :Dob %><br>
-                <%= f.date_field :dob, :class => 'form-control' %>
-              </div>
-
-              <div class="form-group">
-                <%= f.label :Gender %><br>
-                <%= f.select(:gender, [ 'Male', 'Female' ], {}, { :class => 'form-control' }) %>
+                <%= f.label :Pin_Code %><br>
+                <%= f.text_field :pincode, :class => 'form-control' %>
               </div>
               <div class="form-group">
-                <%= f.label :Blood_group %><br>
-                <%= f.select(:blood_group, ['A+', 'A-','B+', 'B-','AB+', 'AB-','O+', 'O-' ], {}, { :class => 'select form-control' }) %>
+                <%= f.label :Phone_Number %><br>
+                <%= f.text_field :phone_no, :class => 'form-control' %>
               </div>
-
-              <div>
-                <%= f.label :Birth_Place %><br>
-                <%= f.text_field :birth_place, :class => 'form-control' %>
-              </div>
+              <h1>upload photo</h1>
               <div class="form-group">
-                <%= f.label :Category %><br>
-                <%= f.text_field :category, :class => 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :Student_Class %><br>
-                <%= f.select(:student_class, ['8th','9th','10th', '11th','12th'], {}, { :class => 'select form-control' }) %>
-              </div>
-              <div class="form-group">
-                <%= f.label :Session %><br>
-                 <%= f.select(:student_class, ['2012','2013', '2014','2015','2016','2017','2018'], {}, { :class => 'select form-control' }) %>
-              </div>
-              <!-- <h1>Contact</h1> -->
-              <div class="form-group">
-                <%= f.label :Address_Line1 %><br>
-                <%= f.text_field :address_line1, :class => 'form-control' %>
-              </div>
-              <div class="form-group">
-               <%= f.label :Address_Line2 %><br>
-               <%= f.text_field :address_line2, :class => 'form-control' %>
+               <%= f.label :Photo %><br>
+               <%= f.file_field :photo, :class => 'form-control' %>
              </div>
+             <br>
              <div class="form-group">
-              <%= f.label :City %><br>
-              <%= f.text_field :city, :class => 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :State %><br>
-              <%= f.text_field :state, :class => 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :Pin_Code %><br>
-              <%= f.text_field :pincode, :class => 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :Phone_Number %><br>
-              <%= f.text_field :phone_no, :class => 'form-control' %>
-            </div>
-            <h1>upload photo</h1>
-            <div class="form-group">
-             <%= f.label :Photo %><br>
-             <%= f.file_field :photo, :class => 'form-control' %>
-           </div>
-           <br>
-           <div class="form-group">
-             <%= f.submit 'Submit', :class => 'btn btn-success' %>
-           </div>
+               <%= f.submit 'Submit', :class => 'btn btn-success' %>
+             </div>
            </div>
          </fieldset>
          <% end %>

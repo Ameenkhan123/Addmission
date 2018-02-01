@@ -10,7 +10,7 @@ class Employee < ApplicationRecord
 
   validates :department, presence: true, if: -> { required_for_step?(:identity) }
   validates :city, presence: true, if: -> { required_for_step?(:characteristics) }
-  # validates :adharcard, presence: true, if: -> { required_for_step?(:instructions) }
+  validates :adharcard, presence: true, if: -> { required_for_step?(:instructions) }
 
   def required_for_step?(step)
     return true if form_step.nil?

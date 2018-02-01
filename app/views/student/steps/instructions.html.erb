@@ -1,4 +1,4 @@
-  <div id='wrapper' style="margin-top: -3%">
+  <div id='wrapper'>
     <!-- Sidebar -->
     <section id='sidebar'>
       <i class='icon-align-justify icon-large' id='toggle'></i>
@@ -8,7 +8,7 @@
           <a href="dashboard.html">Dashboard</a>
         </li>
         <li class='active launcher'>
-         <i class="glyphicon glyphicon-user"></i>
+         <i class="icofont icofont-user-male"></i>
          <a><%= link_to 'Addmission',
           new_student_path %></a>
         </li>
@@ -76,6 +76,9 @@
 
             <fieldset>
       <div class="col-lg-6 left">
+       <center>              
+            <i class="icofont icofont-group-students " style="font-size: 100px;"></i><br>
+            </center>
              <div class="form-group" >
               <%= f.label :Previous_School_Name, :class => 'control-label col-lg-2' %><br>
               <%= f.text_field :previous_school_name, :class => 'form-control' %>

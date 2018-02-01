@@ -8,7 +8,7 @@
           <a href="dashboard.html">Dashboard</a>
         </li>
         <li class='active launcher'>
-          <i class="glyphicon glyphicon-user"></i>
+         <i class="icofont icofont-user-male"></i>
           <a><%= link_to 'Addmission',
             new_student_path %></a>
           </li>
@@ -62,7 +62,7 @@
           <div class='panel panel-default'>
             <div class='panel-heading' style="background-color: #2c3e50; color: white">
               <i class='icon-edit icon-large'></i>
-              Addmission
+             Student
             </div>
             <div class='panel-body' style="background-color: #2c3e50; color: white">
              <%= form_for @student, :html => { :class => "" } do |f| %>
@@ -81,6 +81,11 @@
             </div>
             <% end %>
             <div class="col-lg-6 left">
+            <center>
+              
+            <i class="icofont icofont-group-students " style="font-size: 100px;"></i><br>
+<strong>Student</strong>
+            </center>
               <div class="form-group">
               <%= f.label :first_Name %><br>
                 <%= f.text_field :first_name, :class => 'form-control' %>
@@ -103,6 +108,11 @@
               <% end %>
 
             </div>
+            <i class="icofont icofont-architecture-alt icon" style="font-size: 100px;">
+  
+</i><br>
+          <%= link_to 'employee Registration',
+            new_employee_path, :class => 'icon' %>
           </div>
           <div class='panel panel-default'>
             <div class='panel-heading' style="background-color: #2c3e50; color: white">
