@@ -66,15 +66,7 @@
           </div>
           <div class='panel-body'  style="background-color: #2c3e50; color: white">
             <%= form_for @student, method: :put, url: wizard_path do |f| %>
-            <% if f.object.errors.any? %>
-            <div class="error_messages">
-              <% f.object.errors.full_messages.each do |error| %>
-              <p><%= error %></p>
-              <% end %>
-            </div>
-            <% end %>
-
-            <fieldset>
+         <fieldset>
          <div class="col-lg-6 left">
            <center>              
             <i class="icofont icofont-group-students " style="font-size: 100px;"></i><br>
@@ -83,6 +75,7 @@
               <%= f.label :Father_Name %>
               <br />
               <%= f.text_field :father_name, rows: 10, :class => 'form-control' %>
+                <h4> <%=f.error_span(:father_name) %></h4>
             </div>
             <div class="form-group">
               <%= f.label :Ocupasion %>

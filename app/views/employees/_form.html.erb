@@ -88,13 +88,14 @@
       </div>
       <div class="col-lg-6 left">
         <center>
-          
-          <i class="icofont icofont-architecture-alt"  style="font-size: 100px; "></i><br>
+
+        <i class="icofont icofont-architecture-alt"  style="font-size: 100px;"></i><br>
           <strong>Employee</strong>
         </center>
-        <div class="form-group">
+        <div class="form-group" >
           <%= f.label :First_name %><br>
           <%= f.text_field :first_name, :class => 'form-control' %>
+           <p class='error'><%= show_errors(@employee, :first_name) %></p>
         </div>
 
         <div class="form-group">
@@ -103,7 +104,7 @@
         </div>
         <div class="form-group">
           <div class="control-label col-lg-2'">
-            
+
             <%= f.submit "Submit", :class => 'btn btn-primary' %>
 
             <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
@@ -114,7 +115,7 @@
         <% end %>
       </div>
       <i class="icofont icofont-group-students icon" style="font-size: 100px;">
-        
+
       </i><br>
       <%= link_to 'Student Addmission',
       new_student_path, :class => 'icon' %>

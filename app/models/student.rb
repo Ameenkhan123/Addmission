@@ -8,7 +8,7 @@ class Student < ApplicationRecord
 
   attr_accessor :form_step
 
-  validates :address_line2, presence: true, if: -> { required_for_step?(:identity) }
+  validates :first_name,:address_line2, presence: true, if: -> { required_for_step?(:identity) }
   validates :father_name, presence: true, if: -> { required_for_step?(:characteristics) }
   validates :adharcard, presence: true, if: -> { required_for_step?(:instructions) }
 

@@ -8,8 +8,8 @@ class Employee < ApplicationRecord
 
   attr_accessor :form_step
 
-  validates :department, presence: true, if: -> { required_for_step?(:identity) }
-  validates :city, presence: true, if: -> { required_for_step?(:characteristics) }
+  validates :first_name,:department, presence: true, if: -> { required_for_step?(:identity) }
+  validates :phone_no,:city, presence: true, if: -> { required_for_step?(:characteristics) }
   validates :adharcard, presence: true, if: -> { required_for_step?(:instructions) }
 
   def required_for_step?(step)
