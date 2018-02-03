@@ -68,10 +68,10 @@
 
               <%= form_for @student, method: :put, url: wizard_path do |f| %>
              <fieldset>
-               <div class="col-lg-6 left">   
-                <center>                  
+               <div class="col-lg-6 left">
+                <center>
                   <i class="icofont icofont-group-students " style="font-size: 100px;"></i><br>
-                </center>            
+                </center>
                 <div class="form-group">
                   <%= f.label :Addmission_Date %><br>
                   <%= f.date_field :addmission_date, :class => 'form-control' %>
@@ -93,7 +93,7 @@
 
                 <div class="form-group">
                   <%= f.label :Gender %><br>
-                  <%= f.select(:gender, [ 'Male', 'Female' ], {}, { :class => 'form-control' }) %>
+                  <%= f.select(:gender, [ 'Male', 'Female' ], {}, { :class => 'select form-control' }) %>
                 </div>
                 <div class="form-group">
                   <%= f.label :Blood_group %><br>
